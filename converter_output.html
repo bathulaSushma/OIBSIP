@@ -1,0 +1,56 @@
+
+<!-- saved from url=(0040)file:///D:/Oasis_infobyte/converter.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function get()
+	{
+	var s=document.getElementById("temp").value;
+	var n1=(document.f1.t1.value);
+	if(n1.match(/^-?[0-9]*(?:\.[0-9]+)?$/))
+	{
+		if(s=="Celsius")
+		{
+			document.f1.t3.value=(n1 * 1.8) + 32+"°F";
+		}
+		if(s=="Fahrenheit")
+		{
+		document.f1.t3.value= (n1 * 1.8) - 32+"°C";
+		}
+	}
+	else
+	{
+	window.alert("enter valid number");
+	}
+	}
+</script>
+<style>
+body {
+  background-image: url('temp3.avif');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+</style></head>
+
+<body>
+<center>
+<table border="2">
+<tbody><tr>
+<td>
+<h3>Temperature converter</h3>
+<form name="f1">
+Degrees<br><input type="text" name="t1"><br>
+<p>Select one</p><p>
+<select id="temp">
+<option value="Celsius">Celsius</option>
+<option value="Fahrenheit">Fahrenheit</option>
+</select><br><br>
+Result<br><input type="text" name="t3"><br><br>
+<input type="button" value="Convert" onclick="get()">
+</p></form>
+</td>
+</tr>
+</tbody></table>
+</center>
+
+</body></html>
